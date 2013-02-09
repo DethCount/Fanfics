@@ -1,0 +1,4 @@
+parameters:
+#    count_fanfic.example.class: Count\FanficBundle\Example
+
+services:

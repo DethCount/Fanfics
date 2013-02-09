@@ -1,0 +1,17 @@
+Count\FanficBundle\Document\Metadata:
+    type: document
+    collection: metadata
+    fields:
+        id:
+            id:  true
+        name:
+            type: string
+        slug:
+            type: string
+            gedmo:
+                slug:
+                  unique: false
+                  fields:
+                    - name
+        value:
+            type: string

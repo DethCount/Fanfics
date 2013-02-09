@@ -1,0 +1,20 @@
+<h1>Collection : {{ collection.name }}</h1>
+
+<ul id="metadata">
+    {% for meta in collection.metadata %}
+        <li>{{ meta.name }} : {{ meta.value }}</li>
+    {% endfor %}
+</ul>
+
+<ul id="books">
+    {% for book in collection.books %}
+        <li>
+            <h2>{{ book.name }}</h2>
+            <ul id="metadata">
+                {% for meta in book.metadata %}
+                    <li>{{ meta.name }} : {{ meta.value }}</li>
+                {% endfor %}
+            </ul>
+        </li>
+    {% endfor %}
+</ul>

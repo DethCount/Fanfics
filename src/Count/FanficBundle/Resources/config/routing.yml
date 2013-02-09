@@ -1,0 +1,3 @@
+count_fanfic_homepage:
+    pattern:  /fanfics
+    defaults: { _controller: CountFanficBundle:Default:index }

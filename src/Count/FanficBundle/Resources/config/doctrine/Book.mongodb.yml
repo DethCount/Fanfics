@@ -1,0 +1,16 @@
+Count\FanficBundle\Document\Book:
+    type: document
+    repositoryClass: Count\FanficBundle\Repository\Book
+    collection: books
+    fields:
+        id:
+            id:  true
+        name:
+            type: string
+        slug:
+            type: string
+        description:
+            type: string
+    embedMany:
+        metadata:
+            targetDocument: Count\FanficBundle\Document\Metadata

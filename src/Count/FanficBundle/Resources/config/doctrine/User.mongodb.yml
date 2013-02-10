@@ -1,0 +1,7 @@
+Count\FanficBundle\Document\User:
+    type: document
+    repositoryClass: Count\FanficBundle\Repository\User
+    collection: user
+    fields:
+        id:
+            id: true

@@ -12,25 +12,25 @@ use Count\FanficBundle\Document\Collection,
     Count\FanficBundle\Document\BlockTitle,
     Count\FanficBundle\Document\BlockText;
 
-class DefaultController extends Controller
+class BookController extends Controller
 {
-    public function indexAction()
+    public function indexAction($bookSlug)
     {
         $dm = $this->get('doctrine_mongodb')->getManager();
 
-        $books = $dm->getRepository('CountFanficBundle:Book')
-            ->findAll();
+        $book = $dm->getRepository('CountFanficBundle:Book')
+            ->findOneBySlug($bookSlug);
 
-        if (empty($books)) {
+        if (empty($book)) {
             throw $this->createNotFoundException(
-                'No book exists on this site. Be the first to create one !'
+                'The book you are searching for doesn\'t exists (anymore ?).'
             );
         }
 
         return $this->render(
-            'CountFanficBundle:Default:index.html.twig',
+            'CountFanficBundle:Book:index.html.twig',
             array(
-                'books' => $books
+                'book' => $book
             )
         );
     }

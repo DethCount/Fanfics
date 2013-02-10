@@ -1,21 +1,13 @@
 {% extends '::base.html.twig' %}
 
 {% block body %}
-    <h1>{{ book.name }}</h1>
-    <ul id="metadata">
-        {% for meta in book.metadata %}
-            <li>{{ meta.name }} : {{ meta.value }}</li>
-        {% endfor %}
+    <h1>Full list of this website's books :</h1>
+    
+    <ul class="books">
+    {% for book in books %}
+        <li>
+            <a href="{{ path('count_fanfic_bookpage', { 'bookSlug': book.slug }) }}">{{ book.name }}</a>
+        </li>
+    {% endfor %}
     </ul>
-    {% if book.rootBlock is not empty %}
-        <h3>Elements :</h3>
-        {% for chapter in book.rootBlock.children %}
-            <h4>{{ chapter.title.content }}</h4>
-            {% for child in chapter.children %}
-                <div>{{ child.content }}</div>
-            {% endfor %}
-        {% endfor %}
-    {% else %}
-        <p>No root block found</p>
-    {% endif %}
 {% endblock %}

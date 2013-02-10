@@ -1,3 +1,7 @@
-count_fanfic_homepage:
+count_fanfic_bookpage:
     pattern:  book/{bookSlug}
+    defaults: { _controller: CountFanficBundle:Book:index }
+
+count_fanfic_homepage:
+    pattern:  /
     defaults: { _controller: CountFanficBundle:Default:index }

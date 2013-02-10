@@ -20,6 +20,6 @@ Count\FanficBundle\Document\Block:
             keys:
                 - type
     referenceOne:
-        parent:
+        parent: ~
     referenceMany:
-        children:
+        children: ~

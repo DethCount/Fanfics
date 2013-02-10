@@ -24,11 +24,17 @@ twig:
     debug:            "%kernel.debug%"
     strict_variables: "%kernel.debug%"
 
+mopa_bootstrap:
+    form:
+        show_legend: true # default is true
+        show_child_legend: true # default is true
+        error_type: inline # or inline which is default
+
 # Assetic Configuration
 assetic:
     debug:          "%kernel.debug%"
     use_controller: false
-    bundles:        [ ]
+    bundles:        [ MopaBootstrapBundle ]
     #java: /usr/bin/java
     filters:
         cssrewrite: ~

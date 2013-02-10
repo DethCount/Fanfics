@@ -103,7 +103,7 @@ stof_doctrine_extensions:
         default: ~
     mongodb:
         default:
-            tree:           false
+            tree:           true
             timestampable:  false
             blameable:      false
             sluggable:      true

@@ -14,12 +14,12 @@ use Count\FanficBundle\Document\Collection,
 
 class DefaultController extends Controller
 {
-    public function indexAction()
+    public function indexAction($bookSlug)
     {
         $dm = $this->get('doctrine_mongodb')->getManager();
 
         $book = $dm->getRepository('CountFanficBundle:Book')
-            ->findOneBySlug('my-first-book');
+            ->findOneBySlug($bookSlug);
 
         if (empty($book)) {
             $book = new Book;

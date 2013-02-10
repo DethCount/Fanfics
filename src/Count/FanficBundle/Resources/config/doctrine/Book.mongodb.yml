@@ -9,8 +9,21 @@ Count\FanficBundle\Document\Book:
             type: string
         slug:
             type: string
+            gedmo:
+                slug:
+                  unique: false
+                  fields:
+                    - name
         description:
             type: string
+    indexes:
+        index:
+            keys:
+                - slug
+            order: asc
     embedMany:
         metadata:
             targetDocument: Count\FanficBundle\Document\Metadata
+    referenceOne:
+        rootBlock:
+            targetDocument: Count\FanficBundle\Document\BlockRoot

@@ -130,4 +130,31 @@ class Book
     {
         return $this->metadata;
     }
+    /**
+     * @var Count\FanficBundle\Document\Block
+     */
+    protected $rootBlock;
+
+
+    /**
+     * Set rootBlock
+     *
+     * @param Count\FanficBundle\Document\Block $rootBlock
+     * @return \Book
+     */
+    public function setRootBlock(\Count\FanficBundle\Document\Block $rootBlock)
+    {
+        $this->rootBlock = $rootBlock;
+        return $this;
+    }
+
+    /**
+     * Get rootBlock
+     *
+     * @return Count\FanficBundle\Document\Block $rootBlock
+     */
+    public function getRootBlock()
+    {
+        return $this->rootBlock;
+    }
 }

@@ -102,4 +102,31 @@ class Collection
     {
         return $this->metadata;
     }
+    /**
+     * @var string $slug
+     */
+    protected $slug;
+
+
+    /**
+     * Set slug
+     *
+     * @param string $slug
+     * @return \Collection
+     */
+    public function setSlug($slug)
+    {
+        $this->slug = $slug;
+        return $this;
+    }
+
+    /**
+     * Get slug
+     *
+     * @return string $slug
+     */
+    public function getSlug()
+    {
+        return $this->slug;
+    }
 }

@@ -1,12 +1,24 @@
 Count\FanficBundle\Document\Collection:
     type: document
-    repositoryClass: Count\FanficBundle\Repository\CollectionRepository
+    repositoryClass: Count\FanficBundle\Repository\Collection
     collection: collections
     fields:
         id:
             id:  true
         name:
             type: string
+        slug:
+            type: string
+            gedmo:
+                slug:
+                  unique: false
+                  fields:
+                    - name
+    indexes:
+        index:
+            keys:
+                - slug
+            order: asc
     referenceMany:
         books:
             targetDocument: Count\FanficBundle\Document\Book

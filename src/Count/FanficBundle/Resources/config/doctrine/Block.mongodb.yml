@@ -1,0 +1,25 @@
+Count\FanficBundle\Document\Block:
+    type: document
+    collection: blocks
+    inheritanceType: COLLECTION_PER_CLASS
+    repositoryClass: Count\FanficBundle\Repository\Block
+    fields:
+        id:
+            id:  true
+        path:
+            type: string
+        level:
+            type: int
+        lockTime:
+            type: date
+    indexes:
+        index:
+            keys:
+                - path
+        index:
+            keys:
+                - type
+    referenceOne:
+        parent:
+    referenceMany:
+        children:

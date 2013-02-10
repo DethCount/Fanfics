@@ -1,0 +1,6 @@
+Count\FanficBundle\Document\BlockRoot:
+    type: document
+    repositoryClass: Count\FanficBundle\Repository\BlockRoot
+    collection: blocksRoot
+    fields:
+    

@@ -1,0 +1,7 @@
+Count\FanficBundle\Document\BlockText:
+    type: document
+    repositoryClass: Count\FanficBundle\Repository\BlockText
+    collection: blocksText
+    fields:
+        content:
+            type: string

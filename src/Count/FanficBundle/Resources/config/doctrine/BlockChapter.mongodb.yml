@@ -1,0 +1,8 @@
+Count\FanficBundle\Document\BlockChapter:
+    type: document
+    repositoryClass: Count\FanficBundle\Repository\BlockChapter
+    collection: blocksChapter
+    fields:
+    referenceOne:
+        title:
+            targetDocument: Count\FanficBundle\Document\BlockTitle

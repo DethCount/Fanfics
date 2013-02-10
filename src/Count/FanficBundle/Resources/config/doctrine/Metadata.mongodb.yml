@@ -1,6 +1,5 @@
 Count\FanficBundle\Document\Metadata:
-    type: document
-    collection: metadata
+    type: embeddedDocument
     fields:
         id:
             id:  true
@@ -15,3 +14,8 @@ Count\FanficBundle\Document\Metadata:
                     - name
         value:
             type: string
+    indexes:
+        index:
+            keys:
+                - slug
+            order: asc
